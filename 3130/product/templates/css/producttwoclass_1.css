@@ -1,0 +1,60 @@
+.producttwoclass{
+width: 100%; 
+margin:10px;
+}
+
+.producttwoclass .producttwoclass_top{ 
+clear:both;
+height:30px;
+color: #898989;
+font:12px/26px simsun, Arial, Helvetica, sans-serif;
+cursor: pointer;
+}
+
+.producttwoclass .producttwoclass_top a{
+color: #898989;
+font:12px/26px simsun, Arial, Helvetica, sans-serif;
+padding-left:5px;
+text-decoration: none;
+}
+
+.producttwoclass .producttwoclass_top a:visited{
+color: #898989;
+}
+
+.producttwoclass .producttwoclass_top a:hover{ 
+text-decoration: underline;
+}
+
+
+.producttwoclass ul{ 
+margin:0px 0px 10px 0px;
+padding:0px;
+}
+
+.producttwoclass ul li{
+list-style-type: none;
+float:left;
+height:20px;
+font:12px/20px simsun, Arial, Helvetica, sans-serif;
+margin:0px; 
+padding:0px;
+color: #898989;
+white-space:nowrap;
+}
+
+.producttwoclass ul li a{
+color: #898989;
+font:12px/20px simsun, Arial, Helvetica, sans-serif;
+text-decoration: none;
+margin:0px 6px 0px 6px
+}
+
+.producttwoclass ul li a:visited{
+color: #898989;
+}
+
+.producttwoclass ul li a:hover{ 
+text-decoration: underline;
+}
+

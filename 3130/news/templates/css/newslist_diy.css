@@ -1,0 +1,32 @@
+/* ============ндубап╠М============== */
+
+ul.newslist_diy{
+margin:0px;
+padding:21px 0 0 1px;
+}
+
+li.newslist_diy {
+margin:0px;
+padding-left:9px;
+list-style-type: none;
+height:20px;
+background: transparent url(../images/li.jpg) 0px 4px no-repeat;
+}
+
+li.newslist_diy .time{
+float:right;
+font:10px/12px Verdana, Arial, Helvetica, sans-serif;
+color:#666;
+padding-right:3px;
+}
+
+a.newslist_diy:link,a.newslist_diy:visited,a.newslist_diy:active{
+color:#666;
+text-decoration: none;
+font:12px/13px Verdana, Arial, Helvetica, sans-serif;
+}
+
+a.newslist_diy:hover{
+color:#ff0000;
+font:12px/13px Verdana, Arial, Helvetica, sans-serif;
+}

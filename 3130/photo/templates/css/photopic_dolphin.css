@@ -1,0 +1,35 @@
+#photopic_dolphin{
+margin:0px;
+padding:3px 0px 0px;
+background:url(../images/imgbg.gif) 0 0 no-repeat;
+height:169px;
+}
+
+#photopic_dolphin div.photopic_dolphin{
+border:0px #ddd solid;
+padding:0px 0px 0px 3px;
+text-align:center;
+display:none;
+}
+
+#photopic_dolphin div.picFit{
+overflow: hidden;
+}
+
+#photopic_dolphin div.picFit img{
+}
+
+#photopic_dolphin a.photodtitle:link,#photopic_dolphin a.photodtitle:visited,#photopic_dolphin a.photodtitle:active{
+display:block;
+color:#000;
+font:12px/30px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+text-align:center;
+}
+
+#photopic_dolphin a.photodtitle:hover{
+display:block;
+color:#e10000;
+text-decoration: underline;
+font:12px/30px Verdana, Arial, Helvetica, sans-serif;
+}

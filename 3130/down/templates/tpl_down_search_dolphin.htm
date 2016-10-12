@@ -1,0 +1,25 @@
+<link href="css/down_search_dolphin.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{#CP#}js/searchform.js"></script>
+<SCRIPT language="javascript" src="{#CP#}js/selectBox.js"></SCRIPT>
+<div class="downsearchformzone">
+<form id="downsearchform" method="get" action="{#RP#}down/class/index.php">
+  <div class="downsearchform">
+    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:140px; height:19px;">
+      <option value="0" >请选择分类</option>
+      
+	  {#catlist#}
+    
+    </select> 
+	<script>
+	makeSelectBox('catid','{#RP#}');
+	</script>
+  </div>
+
+    <div class="downsearchform">
+    <input name="key" type="text" id="downsearchform_key" value="{#key#}" style="width:138px;" class="inputtext">
+  </div>
+  <div class="downsearchform2">
+  <input name="imageField" id="button" type="image" src="images/search5.gif" >
+  </div>
+</form>
+</div>

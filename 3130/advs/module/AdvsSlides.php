@@ -1,0 +1,62 @@
+<?php
+
+/*
+	[²å¼þÃû³Æ] Í¼Æ¬ÂÖ²¥S1
+	[ÊÊÓÃ·¶Î§] È«Õ¾
+*/
+
+function AdvsSlides () { 
+
+	global $msql;
+
+	$coltitle=$GLOBALS["PLUSVARS"]["coltitle"];
+	$shownums=$GLOBALS["PLUSVARS"]["shownums"];
+	$tempname=$GLOBALS["PLUSVARS"]["tempname"];
+	$groupid=$GLOBALS["PLUSVARS"]["groupid"];
+	$apiserver=$GLOBALS["CONF"]["apiserver"];
+	$apistr=base64_encode($GLOBALS["CONF"]["phpwebUser"]."|3130|advsslides|".time()."|".md5($GLOBALS["CONF"]["phpwebUser"].$GLOBALS["CONF"]["safecode"].time())."|".$GLOBALS["CONF"]["safecode"]);
+	
+	
+	//Ä£°æ½âÊÍ
+	$Temp=LoadTemp($tempname);
+	$TempArr=SplitTblTemp($Temp);
+
+	$var=array(
+		'coltitle' => $coltitle,
+		'apiserver' => $apiserver,
+		'apistr' => $apistr
+	);
+
+
+	$str.=ShowTplTemp($TempArr["start"],$var);
+
+	$n=0;
+	$msql->query("select * from {P}_advs_lb  where groupid='$groupid' order by xuhao limit 0,$shownums");
+	while($msql->next_record()){
+		$id=$msql->f('id');
+		$src=$msql->f('src');
+		$url=$msql->f('url');
+		$title=$msql->f('title');
+		$text=$msql->f('text');
+
+		$src=ROOTPATH.$src;
+		$var=array (
+		'n' => $n, 
+		'src' => $src, 
+		'url' => $url
+		);
+		$str.=ShowTplTemp($TempArr["list"],$var);
+		
+		$n++;
+	}
+
+	$str.=$TempArr["end"];
+
+	return $str;
+
+	
+}
+
+
+
+?>
