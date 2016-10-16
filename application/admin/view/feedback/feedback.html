@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link  href="css/style.css" type="text/css" rel="stylesheet">
+    <title>{$Think.lang.strAdminTitle}</title>
+    <script>
+        function SelAll(theForm) {
+            for (i = 0; i < theForm.elements.length; i++) {
+                if (theForm.elements[i].type == "checkbox" && theForm.elements[i].name != "SELALL") {
+                    theForm.elements[i].checked = !theForm.elements[i].checked;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+ddd
+</body>
+</html>

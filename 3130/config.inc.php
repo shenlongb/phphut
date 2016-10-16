@@ -1,19 +1,19 @@
 <?php
 
-#[Êý¾Ý¿â²ÎÊý]
+#[æ•°æ®åº“å‚æ•°]
 $dbHost="localhost";
 $dbName="phpweb3130";
 $dbUser="root";
 $dbPass="root";
 
-#[Êý¾Ý±íÇ°×º]
+#[æ•°æ®è¡¨å‰ç¼€]
 $TablePre="pwn3130";
 
-#[ÓïÑÔ]
+#[è¯­è¨€]
 $sLan="zh_cn";
 
-#[ÍøÖ·]
-$SiteUrl="http://3130.phpwebpj.net/";
+#[ç½‘å€]
+$SiteUrl="http://www.phpwebpj.net/";
 
 #----------------------------------#
 
