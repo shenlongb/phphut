@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* css reset */
+html,body,ul,li,p,h1,h2,h3,h4,h5,h6,input,form,dd,dt,dl,ol,caption,td,tr,th,hr{padding:0; margin:0;}
+html{height:100%; width:100%;}
+body{background:#fff; width:100%; font-size:12px; font-family:tahoma,arial,宋体,sans-serif; color:#666;}
+a{text-decoration:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,em,i,b,strong{font-weight:normal; font-style:normal;}
+table,div,img{border-collapse:collapse;border-spacing:0;}
+img{border:0;vertical-align:middle;}
+button,input,select,textarea{font-size:100%; outline:0;}
+:focus{outline:0;}
+textarea{overflow:auto; vertical-align:top; resize:none;}
+button, input[type="button"], input[type="reset"], input[type="submit"]{cursor:pointer;-webkit-appearance: button; *overflow: visible;}
+.clear{zoom:1;}
+.clear:after{content:''; display:block; clear:both;}
+
+#header{width:100%; min-width: 980px; background:#393D49;}
+.login-header{width: 980px; margin:0 auto; height:100px; line-height:100px; position:relative;}
+.login-header h1{width: 150px; height: 50px; background: url(../../img/logo.png) 0 0 no-repeat; position:absolute; left:0; top:25px; text-indent: -9999em }
+.login-header a { float: right; color: #c2c2c2; }
+.login-header a:hover { color: #fff; }
+.login-header a i { float: left; padding-right: 3px; }
+
+.header ul{position:absolute; right:0; top:44px; width:320px;}
+.header ul li{float:left;}
+.header ul li a{display:block;height:32px; line-height:32px;}
+.index_login a, .index_reg a{background:#009fe3; color:#fff; border-radius:14px; width:90px; box-shadow:0 2px 1px #999; text-align:center; font-weight:bold; letter-spacing:6px;}
+.index_reg a{background:#f87e5a; margin:0 30px 0 15px;}
+.index_login a:hover{background:#0897d5;}
+.index_reg a:hover{background:#f56a40;}
+.iphone a{color:#666; font-size:14px; background:url(../../images/v3/iphone.png) 0 4px no-repeat; text-indent:22px;}
+.iphone a:hover{text-decoration:underline;}
+
+.header a{position:absolute; top:60px; right:50px; font-size:12px; color:#666; height:20px; line-height:20px;background:url(../../images/v3/iPhone.png) -25px -290px no-repeat; text-indent:20px;}
+.header a:hover{color:#009fe3;}
+.header h3{position:absolute; top:56px; left:214px; height:24px; font:18px/24px 'Microsoft YaHei'; border-left:1px solid #afafaf; padding:0 12px;}
+
+.loginad{
+    width:580px;
+    height:595px;
+    position: absolute;
+}
+.loginad .loginadtitle{
+    width:100%;
+    text-align:center;
+    line-height:60px;
+    font-size:32px;
+    font-family:"幼圆",Microsoft Yahei;
+    margin-top:70px;
+    color:#FFF;
+}
+.loginad .loginaddes{
+    line-height:30px;
+    color:#FFF;
+    font-family:Microsoft Yahei;
+    font-size:16px;
+    text-align:center
+}
+.loginad .loginadimg{
+    width:100%;
+    height:320px;
+    margin-top:40px;
+
+}
+.loginad .loginadbtn{ width:100%; height:40px; margin-top:30px; }
+.loginad .loginadbtn a{ display:block; width:190px; height:40px; margin:0 auto; text-align:center; line-height:40px; font-size:16px; color:#009fe3; font-weight:bold; background:url(/themes/images/v3/btn.png) center center no-repeat;
+    -moz-border-radius:6px;
+    -khtml-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+}

@@ -50,7 +50,15 @@ if(!IS_CLI) {
         $_root  =   rtrim(dirname(_PHP_FILE_),'/');
         define('__ROOT__',  (($_root=='/' || $_root=='\\') ? '/' : $_root));
     }
+    if(!defined('__PUBLIC__')) {
+        define('__PUBLIC__',  __ROOT__. 'public/');
+    }
+    if(!defined('__STATIC__')) {
+        define('__STATIC__',  __ROOT__. 'static/');
+    }
 }
+
+
 
 // 载入Loader类
 require CORE_PATH . 'Loader.php';

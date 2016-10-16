@@ -1,11 +1,9 @@
 <?php
 namespace app\admin\controller;
 
-use think\Controller;
 use think\Model;
-use think\Request;
 
-class Feedback extends Controller
+class Feedback extends Common
 {
     public function feedback()
     {
@@ -13,7 +11,7 @@ class Feedback extends Controller
         $page    = input('request.page');
         $key     = input('request.key');
         $groupid = input('request.groupid');
-        dump(Request::instance());
+
         return $this->fetch();
     }
 
