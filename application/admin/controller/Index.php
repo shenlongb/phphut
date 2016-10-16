@@ -1,5 +1,5 @@
 <?php
-namespace app\feedback\controller;
+namespace app\admin\controller;
 
 class Index
 {
