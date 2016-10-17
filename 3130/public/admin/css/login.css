@@ -16,57 +16,34 @@ button, input[type="button"], input[type="reset"], input[type="submit"]{cursor:p
 .clear:after{content:''; display:block; clear:both;}
 
 #header{width:100%; min-width: 980px; background:#393D49;}
-.login-header{width: 980px; margin:0 auto; height:100px; line-height:100px; position:relative;}
-.login-header h1{width: 150px; height: 50px; background: url(../../img/logo.png) 0 0 no-repeat; position:absolute; left:0; top:25px; text-indent: -9999em }
-.login-header a { float: right; color: #c2c2c2; }
+.login-header{ max-width: 1200px; min-width: 980px; margin:0 auto; height:100px; line-height:100px; position:relative;}
+.login-header h1{width: 150px; height: 50px; background: url(../../img/logo.png) 0 0 no-repeat; position:absolute; left: 20px; top:25px; text-indent: -9999em }
+.login-header a { float: right; color: #c2c2c2; padding-right: 20px; }
 .login-header a:hover { color: #fff; }
 .login-header a i { float: left; padding-right: 3px; }
 
-.header ul{position:absolute; right:0; top:44px; width:320px;}
-.header ul li{float:left;}
-.header ul li a{display:block;height:32px; line-height:32px;}
-.index_login a, .index_reg a{background:#009fe3; color:#fff; border-radius:14px; width:90px; box-shadow:0 2px 1px #999; text-align:center; font-weight:bold; letter-spacing:6px;}
-.index_reg a{background:#f87e5a; margin:0 30px 0 15px;}
-.index_login a:hover{background:#0897d5;}
-.index_reg a:hover{background:#f56a40;}
-.iphone a{color:#666; font-size:14px; background:url(../../images/v3/iphone.png) 0 4px no-repeat; text-indent:22px;}
-.iphone a:hover{text-decoration:underline;}
+/*login*/
+.login_bg { width: 100%; height: 700px; min-height: 600px; float: left; background: url('../images/login_banner.png') no-repeat top center #048dd6; }
+.login_bg .form { max-width: 1200px; min-width: 980px; margin: 0 auto; position: relative; }
 
-.header a{position:absolute; top:60px; right:50px; font-size:12px; color:#666; height:20px; line-height:20px;background:url(../../images/v3/iPhone.png) -25px -290px no-repeat; text-indent:20px;}
-.header a:hover{color:#009fe3;}
-.header h3{position:absolute; top:56px; left:214px; height:24px; font:18px/24px 'Microsoft YaHei'; border-left:1px solid #afafaf; padding:0 12px;}
+.login_bg .form #login_form { width: 350px; height: 290px; background: url('../images/login.png') no-repeat; padding: 50px 70px 20px 68px; margin: 0 auto; margin-top: 90px; }
 
-.loginad{
-    width:580px;
-    height:595px;
-    position: absolute;
-}
-.loginad .loginadtitle{
-    width:100%;
-    text-align:center;
-    line-height:60px;
-    font-size:32px;
-    font-family:"幼圆",Microsoft Yahei;
-    margin-top:70px;
-    color:#FFF;
-}
-.loginad .loginaddes{
-    line-height:30px;
-    color:#FFF;
-    font-family:Microsoft Yahei;
-    font-size:16px;
-    text-align:center
-}
-.loginad .loginadimg{
-    width:100%;
-    height:320px;
-    margin-top:40px;
+#login_form h2{background:url('../images/iPhone.png') left -452px no-repeat; padding-left:46px; color:#009fe3; font-size:16px; font-weight:bold; height:20px; line-height:20px; margin-bottom:24px;}
 
-}
-.loginad .loginadbtn{ width:100%; height:40px; margin-top:30px; }
-.loginad .loginadbtn a{ display:block; width:190px; height:40px; margin:0 auto; text-align:center; line-height:40px; font-size:16px; color:#009fe3; font-weight:bold; background:url(/themes/images/v3/btn.png) center center no-repeat;
-    -moz-border-radius:6px;
-    -khtml-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-}
+.username, .pw, .cap{width:290px; padding:10px 5px 10px 45px; border:1px solid #009fe3; height:20px; line-height:20px; margin-bottom:10px; border-radius:4px; color:#666;}
+.div_user, .div_pw{position:relative;}
+.div_user span, .div_pw span{position:absolute; left:15px; top:12px; width:16px; height:18px; background:url('../images/iPhone.png') 0 -480px no-repeat; z-index:1;}
+.div_pw span{background-position:0 -506px;}
+.cap { width: 145px; padding-left: 15px; }
+
+.div_box{margin-top:5px; height:20px; line-height:20px; position:relative;}
+.div_box a, .login_reg{position:absolute; right:5px;; top:0; color:#009fe3;}
+.login_reg{font-weight:bold;}
+.div_box a:hover, .login_reg:hover{text-decoration:underline;}
+.div_box input{position:absolute; top:4px; left:0;}
+
+.login_btn{width: 340px; height: 60px; text-align:center; font:bold 16px/60px '宋体'; border:0 none; border-radius:4px; color:#fff; cursor:pointer; background:#009fe3;letter-spacing:6px;}
+.login_btn{display:block; box-shadow:0 2px 1px #999; margin-top:20px;}
+#login_form h4{height:40px; line-height:40px; position:relative;}
+
+.form .button{position:absolute; left:135px; top:179px; width:190px; height:40px;text-align:center; line-height:40px; font-size:16px; color:#009fe3; font-weight:bold;}
