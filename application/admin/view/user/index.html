@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{$Think.lang.strAdminTitle}</title>
+    <link rel="stylesheet" href="{$Think.__STATIC__}layui/css/layui.css" />
+    <script type="application/javascript" src="{$Think.__STATIC__}layui/layui.js"></script>
+    <link rel="stylesheet" href="{$Think.__PUBLIC__}admin/css/global.css" />
+</head>
+<body>
+
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header header header-demo">
+        <div class="layui-main">
+            <a class="logo" href="/">
+                <img src="{$Think.__PUBLIC__}img/logo.png" alt="layui" />
+            </a>
+            <ul class="layui-nav">
+                <li class="layui-nav-item ">
+                    <a href="javascript:;">文档</a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;">演示</a>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a href="javascript:;">社区</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="phphut-admin-left layui-side-scroll">
+            <ul class="layui-nav layui-nav-tree site-demo-nav">
+                <li class="layui-nav-item">
+                    <span class="layui-nav-title phphut-hide-show"><a href="javascript:;">最新活动</a></span>
+                    <ul class="layui-nav layui-nav-tree layui-hide">
+                        <li class="layui-nav-item"><a href="javascript:;">最新活动</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">产品</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">解决方案</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">大数据</a></li>
+                    </ul>
+                </li>
+                <li class="layui-nav-item">
+                    <span class="layui-nav-title phphut-hide-show"><a href="javascript:;">产品</a></span>
+                    <ul class="layui-nav layui-nav-tree layui-hide">
+                        <li class="layui-nav-item"><a href="javascript:;">最新活动</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">产品</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">解决方案</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">大数据</a></li>
+                    </ul>
+                </li>
+                <li class="layui-nav-item">
+                    <span class="layui-nav-title phphut-hide-show"><a href="javascript:;">解决方案</a></span>
+                </li>
+                <li class="layui-nav-item">
+                    <span class="layui-nav-title phphut-hide-show"><a href="javascript:;">賬號設置</a></span>
+                </li>
+                <span class="layui-nav-bar"></span>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+layui.use(['layer', 'element', 'jquery'], function(){
+    var layer = layui.layer
+        ,element = layui.element()
+        ,t = layui.jquery;
+
+    t('.phphut-hide-show').on('click', function () {
+        ts = t(this).next();
+        ts.hasClass('layui-show') ? ts.removeClass('layui-show').addClass('layui-hide') : ts.addClass('layui-show').removeClass('layui-hide');
+    });
+
+    layer.msg('Hello World');
+});
+
+
+</script>
+</body>
+</html>

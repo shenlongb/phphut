@@ -2,6 +2,7 @@
 
 return [
 
+    'strAdminTitle'       => '管理中心',
 #[翻页]
     'strPagesUp'          => '上一页',
     'strPagesDown'        => '下一页',
