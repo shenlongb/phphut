@@ -32,4 +32,6 @@ return [
     'prefix'         => 'pwn3130_',
     // 数据库调试模式
     'debug'          => true,
+    //
+    'auto_timestamp' => true,
 ];

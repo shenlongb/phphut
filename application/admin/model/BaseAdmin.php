@@ -10,10 +10,6 @@ class BaseAdmin extends DataService
     use SoftDelete;
     protected static $deleteTime = 'delete_time';
 
-//    protected static function base($query)
-//    {
-//        $query->where('status','neq', '-1');
-//    }
 
     public function loginCheck($userName, $passWord)
     {
@@ -21,7 +17,7 @@ class BaseAdmin extends DataService
             'user' => $userName,
             'password' => md5($passWord),
         ];
-        $info = $this->where($where)->field('admin_id,status')->find();
+        $info = $this->where($where)->field('admin_id,status')->chunk();
         if (!empty($info)) {
             return '用户不存在';
         } elseif ($info['status'] < 0) {
@@ -48,7 +44,7 @@ class BaseAdmin extends DataService
         }
 
         if ($info['type'] == 2) {
-            $process = model('BaseNode')->getListAll();
+            $process = BaseNode::all();
         } elseif ($info['type'] == 1) {
 
         } else {

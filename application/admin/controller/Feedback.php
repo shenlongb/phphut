@@ -3,8 +3,16 @@ namespace app\admin\controller;
 
 use think\Model;
 
-class Feedback extends Common
+class Feedback extends HutLogin
 {
+
+    public function accessRules()
+    {
+        return [
+            'allow' => ['feedback'],
+        ];
+    }
+
     public function feedback()
     {
         $step    = input('request.step');
