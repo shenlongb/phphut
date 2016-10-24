@@ -3,14 +3,14 @@ namespace app\admin\controller;
 
 use app\admin\model\BaseNode;
 use think\Controller;
+use think\Db;
 use think\Model;
 
-class User extends Common
+class Admin extends Common
 {
     public function index()
     {
-        $process = BaseNode::all();
-        print_r($process);
+        
 
         return $this->fetch();
     }

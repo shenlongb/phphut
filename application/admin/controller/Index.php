@@ -39,10 +39,6 @@ class Index extends Common
             $data = ['code' => 1, 'msg' => $admin_id];
         }
 
-        // 权限判断处理
-        $BaseAdmin = model('BaseAdmin')->process($admin_id);
-
-
         if (empty($data)) {
             $url = url('feedback/feedback');
             $data = ['code' => 0, 'msg' => '', 'url' => $url];
