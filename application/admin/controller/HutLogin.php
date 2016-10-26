@@ -11,7 +11,7 @@ class HutLogin extends Common
 
         // 登陆信息判断
         if (!$this->checkLogin()) {
-            // $this->redirect('Index/login');
+            $this->redirect('Index/login');
         }
 
         // 权限判断

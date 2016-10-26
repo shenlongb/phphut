@@ -4,12 +4,11 @@ return [
 
     'strAdminTitle'       => '管理中心',
 
-    'adminError' => [
-        -1 => '用户不存在',
-        -2 => '用户不存在或已删除',
-        -3 => '用户已禁用',
-        -4 => '不具备后台权限',
-    ],
+    'adminError-1' => '用户不存在',
+    'adminError-2' => '用户不存在或已删除',
+    'adminError-3' => '用户已禁用',
+    'adminError-4' => '不具备后台权限',
+    
 #[翻页]
     'strPagesUp'          => '上一页',
     'strPagesDown'        => '下一页',

@@ -18,8 +18,9 @@ class BaseAdmin extends DataService
             'user' => $userName,
             'password' => md5($passWord),
         ];
-        $info = $this->withTrashed()->where($where)->field('admin_id,status')->select();
-        if (!empty($info)) {
+        $info = $this->withTrashed()->where($where)->field('admin_id,status,delete_time,type')->find();
+
+        if (empty($info)) {
             return -1;
         } elseif ($info['delete_time'] != 0) {
             return -2;
@@ -40,7 +41,7 @@ class BaseAdmin extends DataService
         $admin_id = $info['admin_id'];
 
         if ($info['type'] == 2) {
-            $process = BaseNode::all(['status'=>0]);
+            $process = Db::name('BaseNode')->order(['level'=>'asc','sort'=>'asc'])->where(['status'=>0, 'delete_time'=>0])->select();
         } elseif ($info['type'] == 1) {
             $prefix = config('database.prefix');
             // 获取用户分组
@@ -65,8 +66,17 @@ class BaseAdmin extends DataService
         }
 
         $processArr = [];
+        $process = getKeyArray($process, 'node_id');
+        dump($process);
+        die();
         foreach ($process as $k => $v) {
-            
+            if ($v['level'] == 0) {
+
+            } elseif ($v['level'] == 1) {
+
+            } elseif ($v['level'] == 2) {
+
+            }
         }
 
         return true;

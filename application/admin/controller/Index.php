@@ -36,7 +36,7 @@ class Index extends Common
 
         $admin_id = model('BaseAdmin')->loginCheck($username, $userpass);
         if (0 > $admin_id) {
-            $data = ['code' => 1, 'msg' => $admin_id];
+            $data = ['code' => 1, 'msg' => lang('adminError'.$admin_id)];
         }
 
         if (empty($data)) {
