@@ -1,14 +1,12 @@
 <?php
 namespace app\admin\controller;
 
-use think\Controller;
-use think\Model;
-
 class HutLogin extends Common
 {
     public function __construct()
     {
 
+        $this->process();
         // 登陆信息判断
         if (!$this->checkLogin()) {
             $this->redirect('Index/login');
@@ -35,6 +33,8 @@ class HutLogin extends Common
      */
     public function checkLogin()
     {
+        dump($this->admin_info);
+die();
         return false;
     }
 

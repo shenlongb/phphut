@@ -4,6 +4,7 @@ namespace app\admin\model;
 
 use app\common\model\DataService;
 use think\Db;
+use think\Session;
 use traits\model\SoftDelete;
 
 class BaseAdmin extends DataService
@@ -27,8 +28,6 @@ class BaseAdmin extends DataService
         } elseif ($info['status'] == 1) {
             return -3;
         }
-
-        
 
         // 登陆成功 权限处理
         $this->process($info);
@@ -67,17 +66,35 @@ class BaseAdmin extends DataService
 
         $processArr = [];
         $process = getKeyArray($process, 'node_id');
-        dump($process);
-        die();
+
         foreach ($process as $k => $v) {
-            if ($v['level'] == 0) {
-
-            } elseif ($v['level'] == 1) {
-
+            if ($v['level'] == 1) {
+                $processArr[$v['node_id']]['title'] = $v['title'];
             } elseif ($v['level'] == 2) {
+                $node_id = $process[$v['pid']]['node_id'];
+                $arr = ['title'=>$v['title'], 'url'=> url($process[$node_id]['name'].'/'.$v['name'].'/list')];
+                $processArr[$node_id]['list'][$v['node_id']] = $arr;
+            } elseif ($v['level'] == 3) {
+                $topPid = $process[$v['pid']]['pid'];
+                $node_id = $process[$topPid]['node_id'];
+                $pid_node_id = $process[$v['pid']]['node_id'];
 
+                $arr = ['title'=>$v['title'], 'url'=> url($process[$node_id]['name'].'/'.$process[$pid_node_id]['name'].'/'.$v['name'])];
+                $processArr[$node_id]['list'][$pid_node_id]['node'][] = $arr;
             }
+
+            $info['r_name'] = $v['r_name'];
         }
+
+        if (empty($processArr)) {
+            return -4;
+        }
+
+        $name = config('admin.admin_node');
+        Session::set($name, $processArr);
+
+        $name = config('admin.admin');
+        Session::set($name,$info);
 
         return true;
     }

@@ -41,7 +41,7 @@ function getArray($array)
  */
 function getKeyArray($array,$key)
 {
-    $retArr = array();
+    $retArr = [];
     $array = getArray($array);
     foreach ($array as $k => $v) {
         if (isset($v[$key])) {

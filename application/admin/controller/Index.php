@@ -1,10 +1,6 @@
 <?php
 namespace app\admin\controller;
 
-use app\admin\model\BaseAdmin;
-use think\Controller;
-use think\Db;
-
 class Index extends Common
 {
     public function index()
@@ -14,11 +10,6 @@ class Index extends Common
 
     public function login()
     {
-
-        // dump(BaseAdmin::all(1));
-        $baseAdmin = new BaseAdmin();
-        $baseAdmin->save(['name' => '管理员-2'], ['admin_id' => 1]);
-
         $this->assign('check', url('index/check'));
         return $this->fetch();
     }
@@ -27,7 +18,7 @@ class Index extends Common
     {
         $username = input('post.username');
         $userpass = input('post.userpass');
-        $captcha = input('post.usercap');
+        $captcha = input('post.cap');
 
         $data = [];
         if(!captcha_check($captcha, 1)){
