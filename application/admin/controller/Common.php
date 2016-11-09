@@ -10,7 +10,7 @@ class Common extends Controller
 
     public function __construct()
     {
-
+        $this->process();
         parent::__construct();
     }
 

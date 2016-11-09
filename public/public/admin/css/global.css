@@ -1,0 +1,30 @@
+/* 头部 */
+.header{height: 65px; border-bottom: 1px solid #404553;  background-color: #393D49; color: #fff;}
+.logo{position: absolute; left: 0; top: 14px;}
+.logo img{width: 110px; height: 39px;}
+
+.header .layui-nav{ position: absolute; right: 0; top: 0; padding: 0; background: none;}
+.header .layui-nav .layui-nav-item{margin: 0 20px; line-height: 66px;}
+
+.menu{ position: absolute; right: 0; top: 0; line-height: 65px;}
+.menu a{display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
+.menu a{position: relative; padding: 0 20px; margin: 0 20px; color: #c2c2c2; font-size: 14px;}
+.menu a:hover{color: #fff; transition: all .5s; -webkit-transition: all .5s}
+.menu a.this{color: #fff}
+.menu a.this::after{content: ''; position: absolute; left: 0; bottom: -1px; width: 100%; height: 5px; background-color: #5FB878;}
+
+.header-index{background-color: #080018; border: none;}
+
+.header-demo{ background-color: #393D49; }
+.layui-layout-admin .header-demo { border-bottom-color: #1E9FFF }
+.header-demo .logo{left: 40px;}
+.header-demo .layui-nav{ top: 4px; }
+.header-demo .layui-nav .layui-nav-item a{color: #999;}
+.header-demo .layui-nav .layui-nav-item a:hover,
+.header-demo .layui-nav .layui-this a{color: #000;}
+.header-demo .layui-nav .layui-this:after,
+.header-demo .layui-nav-bar{background-color: #393D49;}
+
+.phphut-admin-left .layui-nav a { padding-left: 20px }
+.phphut-admin-left .layui-nav .layui-nav { padding-left: 5px; }
+.phphut-admin-left .layui-nav .layui-nav a { font-size: 12px; line-height: 35px; }

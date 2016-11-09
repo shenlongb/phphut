@@ -17,9 +17,8 @@ class BaseAdmin extends DataService
     {
         $where = [
             'user' => $userName,
-            'password' => md5($passWord),
         ];
-        $info = $this->withTrashed()->where($where)->field('admin_id,status,delete_time,type')->find();
+        $info = $this->withTrashed()->where($where)->find();
 
         if (empty($info)) {
             return -1;
@@ -27,6 +26,8 @@ class BaseAdmin extends DataService
             return -2;
         } elseif ($info['status'] == 1) {
             return -3;
+        } elseif ($info['password'] != md5($passWord)) {
+            return -4;
         }
 
         // 登陆成功 权限处理
@@ -57,11 +58,11 @@ class BaseAdmin extends DataService
                         ->select();
 
         } else {
-            return -4;
+            return -5;
         }
 
         if (empty($process)) {
-            return -4;
+            return -5;
         }
 
         $processArr = [];
@@ -87,14 +88,22 @@ class BaseAdmin extends DataService
         }
 
         if (empty($processArr)) {
-            return -4;
+            return -5;
         }
 
         $name = config('admin.admin_node');
         Session::set($name, $processArr);
 
         $name = config('admin.admin');
-        Session::set($name,$info);
+        $session = [
+            'admin_id'   => $info['admin_id'],
+            'name'       => $info['name'],
+            'token'      => '',
+            'r_name'     => $info['r_name'],
+            'type'       => $info['type'],
+            'login_time' => time(),
+        ];
+        Session::set($name,$session);
 
         return true;
     }

@@ -22,7 +22,7 @@ class Index extends Common
 
         $data = [];
         if(!captcha_check($captcha, 1)){
-            $data = ['code' => 1, 'msg' => '验证码错误'];
+            return json(['code' => 1, 'msg' => '验证码错误']);
         };
 
         $admin_id = model('BaseAdmin')->loginCheck($username, $userpass);

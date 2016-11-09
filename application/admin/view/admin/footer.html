@@ -1,0 +1,19 @@
+<script>
+
+    layui.use(['layer', 'element', 'jquery'], function(){
+        var layer = layui.layer
+                ,element = layui.element()
+                ,t = layui.jquery;
+
+        t('.phphut-hide-show').on('click', function () {
+            ts = t(this).next();
+            ts.hasClass('layui-show') ? ts.removeClass('layui-show').addClass('layui-hide') : ts.addClass('layui-show').removeClass('layui-hide');
+        });
+
+        layer.msg('Hello World');
+    });
+
+
+</script>
+</body>
+</html>

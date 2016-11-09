@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* css reset */
+html,body,ul,li,p,h1,h2,h3,h4,h5,h6,input,form,dd,dt,dl,ol,caption,td,tr,th,hr{padding:0; margin:0;}
+html{height:100%; width:100%;}
+body{background:#fff; width:100%; font-size:12px; font-family:tahoma,arial,宋体,sans-serif; color:#666;}
+a{text-decoration:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,em,i,b,strong{font-weight:normal; font-style:normal;}
+table,div,img{border-collapse:collapse;border-spacing:0;}
+img{border:0;vertical-align:middle;}
+button,input,select,textarea{font-size:100%; outline:0;}
+:focus{outline:0;}
+textarea{overflow:auto; vertical-align:top; resize:none;}
+button, input[type="button"], input[type="reset"], input[type="submit"]{cursor:pointer;-webkit-appearance: button; *overflow: visible;}
+.clear{zoom:1;}
+.clear:after{content:''; display:block; clear:both;}
+
+#header{width:100%; min-width: 980px; background:#393D49;}
+.login-header{ max-width: 1200px; min-width: 980px; margin:0 auto; height:100px; line-height:100px; position:relative;}
+.login-header h1{width: 150px; height: 50px; background: url(../../img/logo.png) 0 0 no-repeat; position:absolute; left: 20px; top:25px; text-indent: -9999em }
+.login-header a { float: right; color: #c2c2c2; padding-right: 20px; }
+.login-header a:hover { color: #fff; }
+.login-header a i { float: left; padding-right: 3px; }
+
+/*login*/
+.login_bg { width: 100%; height: 700px; min-height: 600px; float: left; background: url('../images/login_banner.png') no-repeat top center #048dd6; }
+.login_bg .form { max-width: 1200px; min-width: 980px; margin: 0 auto; position: relative; }
+
+.login_bg .form #login_form { width: 350px; height: 328px; background: url('../images/login.png') no-repeat; padding: 50px 70px 20px 68px; margin: 0 auto; margin-top: 70px; }
+
+#login_form h2{background:url('../images/iPhone.png') left -452px no-repeat; padding-left:46px; color:#009fe3; font-size:16px; font-weight:bold; height:20px; line-height:20px; margin-bottom:24px;}
+
+.username, .pw, .cap{width:290px; padding:10px 5px 10px 45px; border:1px solid #009fe3; height:20px; line-height:20px; margin-bottom:10px; border-radius:4px; color:#666;}
+.div_user, .div_pw{position:relative;}
+.div_user span, .div_pw span{position:absolute; left:15px; top:12px; width:16px; height:18px; background:url('../images/iPhone.png') 0 -480px no-repeat; z-index:1;}
+.div_pw span{background-position:0 -506px;}
+.cap { width: 145px; padding-left: 15px; }
+
+.div_box{margin-top:5px; height:20px; line-height:20px; position:relative;}
+.div_box a, .login_reg{position:absolute; right:5px;; top:0; color:#009fe3;}
+.login_reg{font-weight:bold;}
+.div_box a:hover, .login_reg:hover{text-decoration:underline;}
+
+.login_btn{width: 340px; height: 60px; text-align:center; font:bold 16px/60px '宋体'; border:0 none; border-radius:4px; color:#fff; cursor:pointer; background:#009fe3;letter-spacing:6px;}
+.login_btn{display:block; box-shadow:0 2px 1px #999; margin-top:20px;}
+#login_form h4{height:40px; line-height:40px; position:relative;}
+
+.form .button{position:absolute; left:135px; top:179px; width:190px; height:40px;text-align:center; line-height:40px; font-size:16px; color:#009fe3; font-weight:bold;}

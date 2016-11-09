@@ -7,8 +7,9 @@ return [
     'adminError-1' => '用户不存在',
     'adminError-2' => '用户不存在或已删除',
     'adminError-3' => '用户已禁用',
-    'adminError-4' => '不具备后台权限',
-    
+    'adminError-4' => '用户密码错误',
+    'adminError-5' => '不具备后台权限',
+
 #[翻页]
     'strPagesUp'          => '上一页',
     'strPagesDown'        => '下一页',
